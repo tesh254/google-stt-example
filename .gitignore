@@ -1,0 +1,4 @@
+node_modules
+gcp-credentials.json
+.env
+dist

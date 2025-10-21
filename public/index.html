@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Transcription</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const App = () => {
+            const [recording, setRecording] = React.useState(false);
+            const [transcript, setTranscript] = React.useState('');
+            const [interimTranscript, setInterimTranscript] = React.useState('');
+            const socketRef = React.useRef(null);
+            const audioContextRef = React.useRef(null);
+            const processorRef = React.useRef(null);
+            const streamRef = React.useRef(null);
+
+            const startRecording = async () => {
+                socketRef.current = new WebSocket('ws://localhost:3000');
+                socketRef.current.onopen = () => {
+                    console.log('WebSocket connection established');
+                };
+                socketRef.current.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    if (data.isFinal) {
+                        setTranscript(prev => prev + data.transcript + ' ');
+                        setInterimTranscript('');
+                    } else {
+                        setInterimTranscript(data.transcript);
+                    }
+                };
+                socketRef.current.onclose = () => {
+                    console.log('WebSocket connection closed');
+                };
+
+                audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)();
+                streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const source = audioContextRef.current.createMediaStreamSource(streamRef.current);
+                processorRef.current = audioContextRef.current.createScriptProcessor(4096, 1, 1);
+
+                processorRef.current.onaudioprocess = (event) => {
+                    const inputData = event.inputBuffer.getChannelData(0);
+                    const buffer = new Int16Array(inputData.length);
+                    for (let i = 0; i < inputData.length; i++) {
+                        buffer[i] = inputData[i] * 32767;
+                    }
+                    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
+                        socketRef.current.send(buffer.buffer);
+                    }
+                };
+
+                source.connect(processorRef.current);
+                processorRef.current.connect(audioContextRef.current.destination);
+
+                setRecording(true);
+            };
+
+            const stopRecording = () => {
+                if (socketRef.current) {
+                    socketRef.current.close();
+                }
+                if (streamRef.current) {
+                    streamRef.current.getTracks().forEach(track => track.stop());
+                }
+                if (audioContextRef.current) {
+                    audioContextRef.current.close();
+                }
+                if (processorRef.current) {
+                    processorRef.current.disconnect();
+                }
+                setRecording(false);
+            };
+
+            return (
+                <div className="container mx-auto p-4 text-center">
+                    <h1 className="text-4xl font-bold mb-4">Real-time Transcription</h1>
+                    <button
+                        className={`px-4 py-2 rounded-lg text-white ${recording ? 'bg-red-500' : 'bg-blue-500'}`}
+                        onClick={recording ? stopRecording : startRecording}
+                    >
+                        {recording ? 'Stop Recording' : 'Start Recording'}
+                    </button>
+                    <div className="mt-4 p-4 border rounded-lg bg-white">
+                        <p>{transcript}<span className="text-gray-500">{interimTranscript}</span></p>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
