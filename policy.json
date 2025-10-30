@@ -1,0 +1,354 @@
+{
+  "bindings": [
+    {
+      "members": [
+        "user:kanyi.signvrse@gmail.com",
+        "user:kenneth.signvrse@gmail.com",
+        "user:moses.signvrse@gmail.com",
+        "user:wambui.signvrse@gmail.com"
+      ],
+      "role": "roles/aiplatform.admin"
+    },
+    {
+      "members": [
+        "user:anthony.signvrse@gmail.com",
+        "user:branice.signvrse@gmail.com",
+        "user:kanyi.signvrse@gmail.com",
+        "user:kenneth.signvrse@gmail.com",
+        "user:moses.signvrse@gmail.com",
+        "user:wambui.signvrse@gmail.com"
+      ],
+      "role": "roles/aiplatform.colabEnterpriseAdmin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-vertex-nb.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.colabServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:vertex-express@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.expressUser"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-aiplatform-vm.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.notebookServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-aiplatform.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.attachmentWriter"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.writer"
+    },
+    {
+      "members": [
+        "user:anthony.signvrse@gmail.com",
+        "user:kanyi.signvrse@gmail.com",
+        "user:kenneth.signvrse@gmail.com",
+        "user:moses.signvrse@gmail.com",
+        "user:wambui.signvrse@gmail.com"
+      ],
+      "role": "roles/billing.projectManager"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-cloudaicompanion.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudaicompanion.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.builds.builder"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.workerPoolUser"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudsql.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-tpu.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudtpu.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@compute-system.iam.gserviceaccount.com"
+      ],
+      "role": "roles/compute.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@container-engine-robot.iam.gserviceaccount.com"
+      ],
+      "role": "roles/container.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@container-analysis.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containeranalysis.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@containerregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containerregistry.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-containerscanning.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containerscanning.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@dataflow-service-producer-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dataflow.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-dataform.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dataform.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-dataplex.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dataplex.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:electron-prompter@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/datastore.user"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292-compute@developer.gserviceaccount.com",
+        "serviceAccount:817689209292@cloudservices.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com",
+        "user:erick.signvrse@gmail.com",
+        "user:kanyi.signvrse@gmail.com",
+        "user:kenneth.signvrse@gmail.com",
+        "user:moses.signvrse@gmail.com",
+        "user:wambui.signvrse@gmail.com"
+      ],
+      "role": "roles/editor"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-firebase.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.managementServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-fbsvc@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.sdkAdminServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-fbsvc@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaseauth.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@firebase-rules.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaserules.system"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-firestore.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firestore.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-fbsvc@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountTokenCreator"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountUser"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com",
+        "user:kenneth.signvrse@gmail.com"
+      ],
+      "role": "roles/logging.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-notebooks.iam.gserviceaccount.com"
+      ],
+      "role": "roles/notebooks.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com",
+        "user:anthony.signvrse@gmail.com",
+        "user:branice.signvrse@gmail.com",
+        "user:ellysavatia@gmail.com",
+        "user:kenneth.signvrse@gmail.com",
+        "user:signvrse@gmail.com",
+        "user:tech.signvrse@gmail.com"
+      ],
+      "role": "roles/owner"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-pubsub.iam.gserviceaccount.com"
+      ],
+      "role": "roles/pubsub.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@cloud-redis.iam.gserviceaccount.com"
+      ],
+      "role": "roles/redis.serviceAgent"
+    },
+    {
+      "members": [
+        "user:erick.signvrse@gmail.com"
+      ],
+      "role": "roles/resourcemanager.projectIamAdmin"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@serverless-robot-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/secretmanager.secretAccessor"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com",
+        "user:erick.signvrse@gmail.com"
+      ],
+      "role": "roles/speech.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/speech.client"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/speech.editor"
+    },
+    {
+      "members": [
+        "serviceAccount:speech-to-text-service@signvrse.iam.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/speech.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:817689209292@cloudbuild.gserviceaccount.com",
+        "serviceAccount:live-link-face-data@signvrse.iam.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:electron-prompter@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.objectViewer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-storageinsights.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storageinsights.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@cloud-tpu.iam.gserviceaccount.com"
+      ],
+      "role": "roles/tpu.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:terp-animations@signvrse.iam.gserviceaccount.com",
+        "serviceAccount:terp-backend@signvrse.iam.gserviceaccount.com"
+      ],
+      "role": "roles/viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-817689209292@gcp-sa-vpcaccess.iam.gserviceaccount.com"
+      ],
+      "role": "roles/vpcaccess.serviceAgent"
+    }
+  ],
+  "etag": "BwZBsr9PlAU=",
+  "version": 1
+}
